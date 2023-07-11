@@ -14,6 +14,12 @@ class FirstCubit extends Cubit<FirstState> {
   void checkPalindrome({
     required String sentence,
   }) {
+    emit(
+      state.copyWith(
+        message: '',
+      ),
+    );
+
     String sentenceReplaced = sentence.replaceAll(' ', '').toLowerCase();
 
     bool isPalindrome =
